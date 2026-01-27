@@ -39,9 +39,9 @@ class ListForwardMixin(object):
 class SwiGLUFFN(nn.Module, ListForwardMixin):
     def __init__(
         self,
-        in_features: int, # 输入的维度
-        hidden_features: Optional[int] = None, # 乘以ffn ratio 后的维度
-        out_features: Optional[int] = None, # 
+        in_features: int,
+        hidden_features: Optional[int] = None,
+        out_features: Optional[int] = None,
         act_layer: Optional[Callable[..., nn.Module]] = None,
         drop: float = 0.0,
         bias: bool = True,

@@ -4,12 +4,7 @@ from .norm import norm_layer_dict
 import math
 
 
-# 空间降维模块
 class PatchEmbed3D(nn.Module):
-    """
-    用于将输入高光谱图像转换为序列化 Patch Embeddings 的模块。
-    执行初始的 3D 卷积和下采样。
-    """
     def __init__(self, in_channels: int, out_channels: int, norm_layer:str, 
                  kernel_size: tuple = (1, 3, 3),  # (7, 4, 3) (3, 2, 1)
                  stride: tuple = (1, 2, 2), 
@@ -26,7 +21,6 @@ class PatchEmbed3D(nn.Module):
         return x
     
 
-# 空间降维模块
 class PatchEmbed2D(nn.Module):
     def __init__(self, in_channels: int, out_channels: int, norm_layer:str, 
                  kernel_size: tuple = (1, 3, 3),  # (7, 4, 3) (3, 2, 1)
@@ -56,10 +50,6 @@ class PatchEmbed2D(nn.Module):
 
 
 class PatchEmbed(nn.Module):
-    """
-    用于将输入高光谱图像转换为序列化 Patch Embeddings 的模块。
-    执行初始的 3D 卷积和下采样。
-    """
     def __init__(self, in_channels: int, out_channels: int, norm_layer:str, 
                  kernel_size: tuple = (1, 3, 3),  # (7, 4, 3) (3, 2, 1)
                  stride: tuple = (1, 2, 2), 

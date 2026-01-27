@@ -35,7 +35,7 @@ class SegmentationTrainer:
             monitor='val/mIoU',
             patience=self.config.get('early_stop_patience', 10),
             mode='max',
-            verbose=True, # 是否打印日志
+            verbose=True,
         )
 
         self.lr_monitor = LearningRateMonitor(logging_interval='epoch')
@@ -53,7 +53,7 @@ class SegmentationTrainer:
             max_epochs=self.config['epochs'],
 
             gpus=self.config.get('gpus', -1),
-            sync_batchnorm=True if len(self.config['gpus']) != 1 else False,  # 如果模型里用BN
+            sync_batchnorm=True if len(self.config['gpus']) != 1 else False,
             strategy=DDPStrategy(find_unused_parameters=False) if len(self.config['gpus']) != 1 else None,
 
             logger=self.logger,

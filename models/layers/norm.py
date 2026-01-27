@@ -21,10 +21,7 @@ class LayerNorm(nn.LayerNorm):
 
 
 norm_layer_dict = {
-    # 标准 LayerNorm 配置，使用 CustomLayerNorm 类和传统的 eps=1e-6
     "layernorm": partial(LayerNorm, eps=1e-6),
-    
-    # bf16 推荐 LayerNorm 配置，使用 CustomLayerNorm 类和更保守的 eps=1e-5
     "layernormbf16": partial(LayerNorm, eps=1e-5),
 }
 

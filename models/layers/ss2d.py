@@ -31,7 +31,6 @@ from collections import OrderedDict
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, trunc_normal_
 from fvcore.nn import FlopCountAnalysis, flop_count_str, flop_count, parameter_count
 
@@ -962,9 +961,7 @@ class SS1Dv2:
             return selective_scan_fn(u, delta, A, B, C, D, delta_bias, delta_softplus, ssoflex, backend=selective_scan_backend)
         
         if True:
-            # 实现4个方向扫描
             # xs = cross_scan_fn(x, in_channel_first=True, out_channel_first=True, scans=_scan_mode, force_torch=scan_force_torch)
-            # 进行投影
             x_dbl = self.x_proj(x)
             dts, Bs, Cs = torch.split(x_dbl, [R, N, N], dim=1)
             dts = dts.contiguous()

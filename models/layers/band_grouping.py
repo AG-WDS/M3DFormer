@@ -4,7 +4,6 @@ import torch
 class BandMulGroupSplitter2D3D(nn.Module):
     def __init__(self, split_scheme: dict = None):
         super().__init__()
-        # 默认分组方案
         self.split_scheme = split_scheme
         self.ndim = {}
         for name, (idxs, dim) in self.split_scheme.items():
