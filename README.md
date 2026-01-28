@@ -14,7 +14,7 @@ M3DFormer integrates a **Hybrid 2D-3D Backbone**, **M3D-Hybrid Attention (M3D-HA
 
 
 ### 2. Accuracy vs. Efficiency
-M3DFormer achieves SOTA results (**90.72%**mIoU), significantly outperforming current benchmarks in terms of the accuracy-efficiency trade-off.
+M3DFormer achieves SOTA results (**90.72%** mIoU), significantly outperforming current benchmarks in terms of the accuracy-efficiency trade-off.
 
 <div align="center">
   <img src="assets/performance.png" width="85%" />
