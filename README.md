@@ -13,8 +13,18 @@ M3DFormer integrates a **Hybrid 2D-3D Backbone**, **M3D-Hybrid Attention (M3D-HA
 </div>
 
 
-### 2. Accuracy vs. Efficiency
-M3DFormer achieves SOTA results (**90.72%**mIoU), significantly outperforming current benchmarks in terms of the accuracy-efficiency trade-off.
+### 2. Core Mechanism: Why M3D-HA?
+
+**M3D-HA** synergizes **BRA** and **SS2D** to generate a **global, dense, and shape-adaptive** receptive field, effectively eliminating the cross-shaped artifacts of pure SSMs for precise boundary delineation.
+
+<div align="center">  <img src="assets/erf_visualization.jpg" width="90%" />  <br>  <em>
+
+
+
+
+### 3. Accuracy vs. Efficiency
+
+M3DFormer achieves SOTA results (**90.72%** mIoU), significantly outperforming current benchmarks in terms of the accuracy-efficiency trade-off.
 
 <div align="center">
   <img src="assets/performance.png" width="85%" />
