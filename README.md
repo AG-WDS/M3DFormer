@@ -17,7 +17,7 @@ M3DFormer integrates a **Hybrid 2D-3D Backbone**, **M3D-Hybrid Attention (M3D-HA
 
 **M3D-HA** synergizes **BRA** and **SS2D** to generate a **global, dense, and shape-adaptive** receptive field, effectively eliminating the cross-shaped artifacts of pure SSMs for precise boundary delineation.
 
-<div align="center">  <img src="assets/erf_visualization.jpg" width="90%" />  <br>  <em>
+<div align="center">  <img src="assets/erf_visualization.jpg" width="90%" />  <br>
 
 
 
